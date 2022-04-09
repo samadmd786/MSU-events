@@ -21,3 +21,21 @@ def home1():
 	return render_template('home.html')
 
 
+
+@app.route('/clubs.html')
+def club():
+	return render_template('clubs.html')
+
+@app.route('/professional.html')
+def professional():
+	return render_template('professional.html')
+
+@app.route('/community.html')
+def community():
+	return render_template('community.html')
+
+@app.route('/entertainment.html')
+def entertainment():
+	return render_template('entertainment.html')
+
+
