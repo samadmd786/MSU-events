@@ -160,6 +160,7 @@ class database:
         for row in instQuery:
             
             lis.append(row)
-        return row
+        # print(lis)
+        return lis
 
             

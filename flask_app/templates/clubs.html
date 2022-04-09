@@ -3,11 +3,13 @@
 {% block content %}Clubs{% endblock %}
 
 {% block maincontent %}
+{% for key in data %}
+<p class="info_head">
+ {% for k,v in key.items() %}
+    {{v}}
 
-{% for i,j in data.items() %}
-<p>
-    {{j}}
 </p>
+{% endfor %}
 {% endfor %}
 
 {% endblock %}

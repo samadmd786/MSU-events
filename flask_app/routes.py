@@ -25,6 +25,7 @@ def home1():
 @app.route('/clubs.html')
 def club():
 	club_data = db.getData("clubs")
+	print(type(club_data))
 	return render_template('clubs.html',data=club_data)
 
 @app.route('/professional.html')
