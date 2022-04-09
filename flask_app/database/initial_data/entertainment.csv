@@ -1,4 +1,4 @@
-`type`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
+`#`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
 "Theatre","Hamilton","Musical","2022-04-10","Wharton Center","East Lansing","Michigan","48825"
 "Sports","Minor League MSU team","Basketball","2022-04-12","Breslin Center","East Lansing","Michigan","48825"
 "Festival","City Of Lansing","Prime Music Festival","2022-08-21","Adado Park","Lansing","Michigan","48912"
