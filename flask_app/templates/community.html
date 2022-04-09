@@ -1,9 +1,13 @@
 {% extends 'shared/layout.html' %}
 
-{% block content %}Community{% endblock %}
+{% block content %}Clubs{% endblock %}
 
 {% block maincontent %}
 
-
+{% for i,j in data.items() %}
+<p>
+    {{j}}
+</p>
+{% endfor %}
 
 {% endblock %}

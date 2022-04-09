@@ -113,35 +113,36 @@ class database:
         file = query.read()
         self.query(file)
 
-        # file = open(data_path+"initial_data/professional.csv")
-        # csv_file = csv.reader(file)
-        # next(csv_file, None)
-        # for i in csv_file:
-        #     self.insertRows("professional", [
-        #                     "professional_id","type","name","eventName","start_date","address","city","state","zip"], i)
+        file = open(data_path+"initial_data/professional.csv")
+        csv_file = csv.reader(file)
+        next(csv_file, None)
+        for i in csv_file:
+            self.insertRows("professional", [
+                            "professional_id","type","name","eventName","start_date","address","city","state","zip"], i)
 
-        # query = open(data_path+"create_tables/community.sql")
-        # file = query.read()
-        # self.query(file)
+        query = open(data_path+"create_tables/community.sql")
+        file = query.read()
+        self.query(file)
 
-        # file = open(data_path+"initial_data/community.csv")
-        # csv_file = csv.reader(file)
-        # next(csv_file, None)
-        # for i in csv_file:
-        #     self.insertRows("community", [
-        #                     "community_id","type","name","eventName","start_date","address","city","state","zip"], i)
+        file = open(data_path+"initial_data/community.csv")
+        csv_file = csv.reader(file)
+        next(csv_file, None)
+        for i in csv_file:
+            self.insertRows("community", [
+                            "community_id","type","name","eventName","start_date","address","city","state","zip"], i)
 
-        # query = open(data_path+"create_tables/entertainment.sql")
-        # file = query.read()
-        # self.query(file)
+        query = open(data_path+"create_tables/entertainment.sql")
+        file = query.read()
+        self.query(file)
 
-        # file = open(data_path+"initial_data/entertainment.csv")
-        # csv_file = csv.reader(file)
-        # next(csv_file, None)
-        # for i in csv_file:
-        #     self.insertRows("entertainment", [
-        #                     "entertainment_id","type","name","eventName","start_date","address","city","state","zip"], i)
+        file = open(data_path+"initial_data/entertainment.csv")
+        csv_file = csv.reader(file)
+        next(csv_file, None)
+        for i in csv_file:
+            self.insertRows("entertainment", [
+                            "entertainment_id","type","name","eventName","start_date","address","city","state","zip"], i)
 
+       
     def insertRows(self, table='table', columns=['x', 'y'], parameters=[['v11', 'v12'], ['v21', 'v22']]):
         column = " ".join(columns)
         column = column.replace(' ', ",")
@@ -153,7 +154,12 @@ class database:
         # print(query)
         self.query(query) 
     
-    def getClubData(self):
-        instQuery = self.query("SELECT * from clubs;")
-        # for row in instQuery:
+    def getData(self,table):
+        instQuery = self.query(f"""SELECT * from {table};""")
+        lis = []
+        for row in instQuery:
+            
+            lis.append(row)
+        return row
+
             

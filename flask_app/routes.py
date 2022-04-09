@@ -24,18 +24,22 @@ def home1():
 
 @app.route('/clubs.html')
 def club():
-	return render_template('clubs.html')
+	club_data = db.getData("clubs")
+	return render_template('clubs.html',data=club_data)
 
 @app.route('/professional.html')
 def professional():
-	return render_template('professional.html')
+	pro_data = db.getData("professional")
+	return render_template('professional.html', data= pro_data)
 
 @app.route('/community.html')
 def community():
-	return render_template('community.html')
+	com_data = db.getData("community")
+	return render_template('community.html',data= com_data)
 
 @app.route('/entertainment.html')
 def entertainment():
-	return render_template('entertainment.html')
+	enter_data =db.getData("entertainment")
+	return render_template('entertainment.html',data = enter_data)
 
 
