@@ -90,8 +90,8 @@ class database:
 
     def createTables(self, purge=False, data_path='flask_app/database/'):
         # print('I create and populate database tables.')
-        self.query("DROP table IF EXISTS skills")
-        query = open(data_path+"create_tables/institutions.sql")
+        self.query("DROP table IF EXISTS club")
+        query = open(data_path+"create_tables/club.sql")
         file = query.read()
         self.query(file)
 
