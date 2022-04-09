@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/header.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/resume.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/footer.css') }}">
+  
+
+
+  <!-- Title of the page -->
+  <title>
+    {% block content %} {% endblock %}
+
+  </title>
+</head>
+
+<body>
+  <!-- Header of the page -->
+  <header>
+    <div class="header">
+      <img src="../static/main/images/banner.jpg" alt="banner">
+
+    </div>
+  </header>
+  <!-- Nav bar -->
+  <nav class="header">
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          MSU Events
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <img src="../static/main/images/menu-bar.png">
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- Main section -->
+    
+    
+    {% block maincontent %}{% endblock %}
+    <br>
+  </main>
+  <!-- Footer of the page -->
+  <footer>Events</footer>
+</body>
+
+
+</html>
