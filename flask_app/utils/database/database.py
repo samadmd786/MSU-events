@@ -90,10 +90,70 @@ class database:
 
     def createTables(self, purge=False, data_path='flask_app/database/'):
         # print('I create and populate database tables.')
-        self.query("DROP table IF EXISTS club")
+        table = ["club","professional","community","entertainment"]
+        # for i in table:
+        self.query("DROP table IF EXISTS clubs")
+        self.query("DROP table IF EXISTS professional")
+        self.query("DROP table IF EXISTS community")
+        self.query("DROP table IF EXISTS entertainment")
+
+
         query = open(data_path+"create_tables/club.sql")
         file = query.read()
         self.query(file)
 
-    #def insertRows(self, table='table', columns=['x', 'y'], parameters=[['v11', 'v12'], ['v21', 'v22']]):
-       
+        file = open(data_path+"initial_data/club.csv")
+        csv_file = csv.reader(file)
+        next(csv_file, None)
+        for i in csv_file:
+            self.insertRows("clubs", [
+                            "club_id","type","name","eventName","start_date","address","city","state","zip"], i)
+
+        query = open(data_path+"create_tables/professional.sql")
+        file = query.read()
+        self.query(file)
+
+        # file = open(data_path+"initial_data/professional.csv")
+        # csv_file = csv.reader(file)
+        # next(csv_file, None)
+        # for i in csv_file:
+        #     self.insertRows("professional", [
+        #                     "professional_id","type","name","eventName","start_date","address","city","state","zip"], i)
+
+        # query = open(data_path+"create_tables/community.sql")
+        # file = query.read()
+        # self.query(file)
+
+        # file = open(data_path+"initial_data/community.csv")
+        # csv_file = csv.reader(file)
+        # next(csv_file, None)
+        # for i in csv_file:
+        #     self.insertRows("community", [
+        #                     "community_id","type","name","eventName","start_date","address","city","state","zip"], i)
+
+        # query = open(data_path+"create_tables/entertainment.sql")
+        # file = query.read()
+        # self.query(file)
+
+        # file = open(data_path+"initial_data/entertainment.csv")
+        # csv_file = csv.reader(file)
+        # next(csv_file, None)
+        # for i in csv_file:
+        #     self.insertRows("entertainment", [
+        #                     "entertainment_id","type","name","eventName","start_date","address","city","state","zip"], i)
+
+    def insertRows(self, table='table', columns=['x', 'y'], parameters=[['v11', 'v12'], ['v21', 'v22']]):
+        column = " ".join(columns)
+        column = column.replace(' ', ",")
+        values = ''
+        for i in parameters:
+            values += "'"+i+"'"+','
+        values = values.rstrip(',')
+        query = f"""INSERT  INTO {table} ({column}) VALUES ({values}) """
+        # print(query)
+        self.query(query) 
+    
+    def getClubData(self):
+        instQuery = self.query("SELECT * from clubs;")
+        # for row in instQuery:
+            
