@@ -1,9 +1,9 @@
-`event_no`,`type`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
-"1","professional","Spartan Hack","Sparta Hackathan","2022-04-09","Wells hall","East Lansing","Michigan","48825"
-"2","professional","COB","Hospitality Business Roadshow","2022-06-08","Novi","Grand River Avenue","Michigan","48374 "
-"3","professional","COB","Executive MBA | Program Preview ","2022-04-16","Square Lake Rd","Troy","Michigan","48098"
-"4","professional","COE","College to CEO: Speaker Andrew Farah","2022-06-08","MSU","East Lansing","Michigan","48825"
-"5","professional","COE","ChEMS Department Seminar ","2022-08-21","MSU","East Lansing","Michigan","48825"
-"6","professional","COSS","Evidence and Economic Implications","2022-04-30","Bessey hall","East Lansing","Michigan","48825"
-"7","professional","COCA","ComArtSci RVSM Conversations","2022-04-08","online","East Lansing","Michigan","48825"
-"8","professional","MSU","Career fair","2022-07-16","Mcdonel hall","East Lansing","Michigan","48825"
+`type`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
+"professional","Spartan Hack","Sparta Hackathan","2022-04-09","Wells hall","East Lansing","Michigan","48825"
+"professional","COB","Hospitality Business Roadshow","2022-06-08","Novi","Grand River Avenue","Michigan","48374 "
+"professional","COB","Executive MBA | Program Preview ","2022-04-16","Square Lake Rd","Troy","Michigan","48098"
+"professional","COE","College to CEO: Speaker Andrew Farah","2022-06-08","MSU","East Lansing","Michigan","48825"
+"professional","COE","ChEMS Department Seminar ","2022-08-21","MSU","East Lansing","Michigan","48825"
+"professional","COSS","Evidence and Economic Implications","2022-04-30","Bessey hall","East Lansing","Michigan","48825"
+"professional","COCA","ComArtSci RVSM Conversations","2022-04-08","online","East Lansing","Michigan","48825"
+"professional","MSU","Career fair","2022-07-16","Mcdonel hall","East Lansing","Michigan","48825"
