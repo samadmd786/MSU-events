@@ -90,13 +90,12 @@ class database:
 
     def createTables(self, purge=False, data_path='flask_app/database/'):
         # print('I create and populate database tables.')
-        table = ["club","professional","community","entertainment"]
+        table = ["club", "professional", "community", "entertainment"]
         # for i in table:
         self.query("DROP table IF EXISTS clubs")
         self.query("DROP table IF EXISTS professional")
         self.query("DROP table IF EXISTS community")
         self.query("DROP table IF EXISTS entertainment")
-
 
         query = open(data_path+"create_tables/club.sql")
         file = query.read()
@@ -107,7 +106,7 @@ class database:
         next(csv_file, None)
         for i in csv_file:
             self.insertRows("clubs", [
-                            "club_id","type","name","eventName","start_date","address","city","state","zip"], i)
+                            "event_no", "type", "name", "eventName", "start_date", "address", "city", "state", "zip"], i)
 
         query = open(data_path+"create_tables/professional.sql")
         file = query.read()
@@ -118,7 +117,7 @@ class database:
         next(csv_file, None)
         for i in csv_file:
             self.insertRows("professional", [
-                            "professional_id","type","name","eventName","start_date","address","city","state","zip"], i)
+                            "event_no", "type", "name", "eventName", "start_date", "address", "city", "state", "zip"], i)
 
         query = open(data_path+"create_tables/community.sql")
         file = query.read()
@@ -129,7 +128,7 @@ class database:
         next(csv_file, None)
         for i in csv_file:
             self.insertRows("community", [
-                            "community_id","type","name","eventName","start_date","address","city","state","zip"], i)
+                            "event_no", "type", "name", "eventName", "start_date", "address", "city", "state", "zip"], i)
 
         query = open(data_path+"create_tables/entertainment.sql")
         file = query.read()
@@ -140,9 +139,8 @@ class database:
         next(csv_file, None)
         for i in csv_file:
             self.insertRows("entertainment", [
-                            "entertainment_id","type","name","eventName","start_date","address","city","state","zip"], i)
+                            "event_no", "type", "name", "eventName", "start_date", "address", "city", "state", "zip"], i)
 
-       
     def insertRows(self, table='table', columns=['x', 'y'], parameters=[['v11', 'v12'], ['v21', 'v22']]):
         column = " ".join(columns)
         column = column.replace(' ', ",")
@@ -152,15 +150,13 @@ class database:
         values = values.rstrip(',')
         query = f"""INSERT  INTO {table} ({column}) VALUES ({values}) """
         # print(query)
-        self.query(query) 
-    
-    def getData(self,table):
+        self.query(query)
+
+    def getData(self, table):
         instQuery = self.query(f"""SELECT * from {table};""")
         lis = []
         for row in instQuery:
-            
-            lis.append(row)
-        # print(lis)
-        return lis
 
-            
+            lis.append(row)
+        
+        return lis

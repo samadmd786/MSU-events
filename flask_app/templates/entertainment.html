@@ -4,10 +4,16 @@
 
 {% block maincontent %}
 
-{% for i,j in data.items() %}
-<p>
-    {{j}}
+{% for key in data %}
+<p class="info_head">
+ {% for k,v in key.items() %}
+ {{k}} - {{v}}
+
 </p>
 {% endfor %}
+{% endfor %}
+
+<br>
+<br>
 
 {% endblock %}

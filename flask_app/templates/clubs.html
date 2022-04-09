@@ -6,10 +6,13 @@
 {% for key in data %}
 <p class="info_head">
  {% for k,v in key.items() %}
-    {{v}}
+ {{k}} - {{v}}
 
 </p>
 {% endfor %}
 {% endfor %}
+
+<br>
+<br>
 
 {% endblock %}

@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `community` (
-`community_id`        int(11)       NOT NULL AUTO_INCREMENT 	COMMENT 'The organization id',
+`event_no`        int(11)       NOT NULL AUTO_INCREMENT 	COMMENT 'The organization id',
 `type`           varchar(100)  NOT NULL                	COMMENT 'Organization Type; e.g. Academia, Industry, Government', 
 `name`           varchar(100)  NOT NULL                	COMMENT 'The name of the club',
 `eventName`     varchar(100)  DEFAULT NULL            	COMMENT 'The name of the event',
@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS `community` (
 `city`           varchar(100)  DEFAULT NULL            	COMMENT 'The city of the event.',
 `state`          varchar(100)  DEFAULT NULL            	COMMENT 'The state of the event.',
 `zip`            varchar(10)   DEFAULT NULL            	COMMENT 'The zip of teh event',  
-PRIMARY KEY  (`community_id`)
+PRIMARY KEY  (`event_no`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT="community events"

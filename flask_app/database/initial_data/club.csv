@@ -1,3 +1,3 @@
-`club_id`,`type`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
+`event_no`,`type`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
 "1","Fun","UAB","Laser Tag","2018-06-08","MSU","East Lansing","Michigan","48825"
 "2","Spanish","Spanish Club","Taco Night","2018-12-08","Coral Gables","East Lansing","Michigan","48825"
