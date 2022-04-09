@@ -1,4 +1,4 @@
-`#`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
+`type`,`name`,`eventName`,`start_date`,`address`,`city`,`state`,`zip`
 "professional","Spartan Hack","Sparta Hackathan","2022-04-09","Wells hall","East Lansing","Michigan","48825"
 "professional","COB","Hospitality Business Roadshow","2022-06-08","Novi","Grand River Avenue","Michigan","48374 "
 "professional","COB","Executive MBA | Program Preview ","2022-04-16","Square Lake Rd","Troy","Michigan","48098"

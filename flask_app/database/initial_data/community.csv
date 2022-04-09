@@ -1,4 +1,4 @@
-event_no`,`#`,name`,eventName`,start_date`,`address`,`city`,`state`,`zip`
+`type`,`name`,`eventName`,`start_date`,`address`,`city`,`state`,`zip`
 "Volunteer","Habitat for Humanity","Community Volunteer","2022-04-10","MSU Garden","East Lansing","Michigan","48825"
 "Volunteer","Soup Kitchen","Food Drivel","2022-04-13","Soup Kicthen","East Lansing","Michigan","48825"
 "Volunteer","Sunrise Movement","Voter Registration","2022-08-21","Hannah Building","East Lansing","Michigan","48825"
