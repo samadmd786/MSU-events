@@ -15,8 +15,20 @@ body {
     padding: 20px;
 }  
 p {
+  font-weight: bold;
   background-color: rgb(236, 236, 236);
   color: rgb(0, 0, 0);
-  
+
+}
+.bubble {
+  display: inline-block;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-decoration: none;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  width: 270px;
+  height: 50px;
 }
 
